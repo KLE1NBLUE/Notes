@@ -1,0 +1,32 @@
+/*horizontal-tb: 块流向从上至下。对应的文本方向是横向的。
+vertical-rl: 块流向从右向左。对应的文本方向是纵向的。
+vertical-lr: 块流向从左向右。对应的文本方向是纵向的。*/
+.box {
+    inline-size: 200px;
+    writing-mode: horizontal-tb;
+  }
+  
+  .logical {
+    margin-block-start: 20px;
+    padding-inline-end: 2em;
+    padding-block-start: 2px;
+    border-block-start: 5px solid pink;
+    border-inline-end: 10px dotted rebeccapurple;
+    border-block-end: 1em double orange;
+    border-inline-start: 1px solid black;
+  }
+  
+  .physical {
+    margin-top: 20px;
+    padding-right: 2em;
+    padding-top: 2px;
+    border-top: 5px solid pink;
+    border-right: 10px dotted rebeccapurple;
+    border-bottom: 1em double orange;
+    border-left: 1px solid black;
+  }
+  
+  h2 {
+    border-bottom: 5px solid black;
+  }
+      

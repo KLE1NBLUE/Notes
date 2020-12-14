@@ -1,0 +1,70 @@
+article p:last-child {
+    font-size  : 120%;
+    font-weight: bold;
+}
+
+/* 我们可以使用:first-child伪类选择器——这将一直选中文章中的第一个子元素，我们将不再需要编辑HTML*/
+
+article p::first-line {
+    font-size  : 120%;
+    font-weight: bold;
+}
+
+a:link,
+a:visited {
+    color      : blueviolet;
+    font-weight: bold;
+}
+
+a:hover {
+    color: violet;
+}
+
+.box::before {
+    content         : "";
+    display         : block;
+    width           : 100px;
+    height          : 100px;
+    background-color: rebeccapurple;
+    border          : 1px solid black;
+}
+
+.box p {
+    color: red;
+}
+
+/*后代选择器——典型用单个空格 字符——组合两个选择器，
+比如，第二个选择器匹配的元素被选择，如果他们有一个祖先
+（父亲，父亲的父亲，父亲的父亲的父亲，等等）元素匹配第一个选择器。
+选择器利用后代组合符被称作后代选择器。*/
+
+ul > li {
+    border-top: 5px solid red;
+}  
+ /*子代关系选择器是个大于号（>），
+ 只会在选择器选中直接子元素的时候匹配。
+ 继承关系上更远的后代则不会匹配。
+ 如只选中作为<article>的直接子元素的<p>元素：*/  
+
+
+ h1 + p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}   
+/*邻接兄弟选择器（+）用来选中恰好处于另一个
+在继承关系上同级的元素旁边的物件。
+例如，选中所有紧随<p>元素之后的<img>元素：*/   
+
+h1 ~ p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+/*通用兄弟
+如果你想选中一个元素的兄弟元素，
+即使它们不直接相邻，
+你还是可以使用通用兄弟关系选择器（~）。
+要选中所有的<p>元素后任何地方的<img>元素*/
