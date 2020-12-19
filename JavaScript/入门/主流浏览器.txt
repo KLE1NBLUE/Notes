@@ -1,0 +1,5 @@
+IE     -trident
+Chrome -webkit/blink
+firefox-Gecko
+Opera  -presto
+Safari -webkit
