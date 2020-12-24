@@ -1,5 +1,8 @@
 package com.zane.utils;
 
+import org.springframework.stereotype.Component;
+
+@Component("test")
 public class CalImpl implements Cal{
 
     @Override
